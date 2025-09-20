@@ -11,7 +11,7 @@ jobs:
       version-changed: ${{ steps.version-check.outputs.changed }}
       version: ${{ steps.version-check.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 2
       - name: Check if version changed
@@ -57,7 +57,7 @@ jobs:
       packages: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
